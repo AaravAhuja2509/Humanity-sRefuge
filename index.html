@@ -1,91 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-black text-white">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transparent Navbar with Hover + Toggle Dark</title>
+    <title>New Home Mission</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100">
+<body
+    class="bg-[url('https://images.unsplash.com/photo-1587835931376-b58a2b50f4b3?auto=format&fit=crop&w=1950&q=80')] bg-cover bg-center bg-no-repeat backdrop-blur-sm">
 
-    <!-- Hero Background -->
+    <button id="sidebarToggle"
+        class="fixed top-4 left-1 z-50 text-white bg-black bg-opacity-40 hover:bg-opacity-70 p-2 rounded-full shadow-lg">
+        &#8942;
+    </button>
+    <aside id="sidebar"
+        class="fixed top-0 left-0 h-full w-64 bg-gradient-to-b  shadow-lg transform -translate-x-full transition-transform duration-300 z-40">
+        <div class="p-6 space-y-4">
+            <h2 class="text-xl font-bold text-pink-800"><br>Hidden Vault</h2>
+            <p class="text-sm text-yellow-700">
+                Hidden records of potential alien messages and lost star maps recovered from deep space.
+            </p>
+            <ul class="space-y-2"><br><br>
+                <li><a href="#" class="text-orange-900 hover:underline">DNA Records</a></li>
+                <li><a href="#" class="text-orange-900 hover:underline">UFO Logs</a></li>
+                <li><a href="#" class="text-orange-900 hover:underline">Escape Routes</a></li>
+            </ul>
+        </div>
+    </aside>
+
+
     <div class="relative h-screen bg-cover bg-center"
         style="background-image: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1350&q=80');">
 
-        <!-- Tint -->
-        <div class="absolute inset-0 bg-black bg-opacity-40 z-0"></div>
+        <div class="absolute inset-0 bg-black/60"></div>
 
-        <!-- Navbar -->
-        <nav class="absolute top-0 left-0 w-full z-10 transition-colors duration-300">
-            <div id="navbar-bg" class="transition-all duration-300 bg-black/20 hover:bg-black/40 backdrop-blur-sm">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="flex items-center justify-between h-16">
+        <header class="absolute top-0 w-full z-20 bg-transparent">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
 
-                        <!-- Logo -->
-                        <div class="text-xl font-bold text-white">MyBrand</div>
+                    <a href="index.html" class="text-xl font-bold text-white hover:text-blue-300">NEW HOME MISSION</a>
+                    <nav class="hidden md:flex space-x-6 text-white font-medium">
+                        <a href="index.html" class="hover:text-blue-300">Home</a>
+                        <a href="mission.html" class="hover:text-blue-300">Our Mission</a>
+                        <a href="contenders.html" class="hover:text-blue-300">Our Contenders</a>
+                    </nav>
 
-                        <!-- Centered Links (Desktop) -->
-                        <div class="hidden md:flex md:space-x-8 md:justify-center md:flex-grow">
-                            <a href="home.html" class="text-white font-medium hover:text-blue-300">Home</a>
-                            <a href="about.html" class="text-white font-medium hover:text-blue-300">About</a>
-                            <a href="services.html" class="text-white font-medium hover:text-blue-300">Services</a>
-                            <a href="contact.html" class="text-white font-medium hover:text-blue-300">Contact</a>
-                        </div>
-
-                        <!-- Mobile Toggle Button -->
-                        <div class="md:hidden">
-                            <button id="menu-btn" class="text-white focus:outline-none">
-                                <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
-                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16">
-                                    </path>
-                                </svg>
-                            </button>
-                        </div>
-
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-white focus:outline-none">
+                            <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
-            </div>
 
-            <!-- Mobile Menu -->
-            <div id="mobile-menu"
-                class="hidden md:hidden bg-black/80 backdrop-blur-sm px-4 pb-4 space-y-2 transition duration-300">
-                <a href="home.html" class="block text-white hover:text-blue-300">Home</a>
-                <a href="about.html" class="block text-white hover:text-blue-300">About</a>
-                <a href="services.html" class="block text-white hover:text-blue-300">Services</a>
-                <a href="contact.html" class="block text-white hover:text-blue-300">Contact</a>
+                <div id="mobile-menu"
+                    class="hidden md:hidden mt-2 space-y-2 px-2 pt-2 pb-3 bg-black/80 backdrop-blur-md rounded-lg text-white font-medium">
+                    <a href="index.html" class="block px-4 py-2 hover:text-blue-300">Home</a>
+                    <a href="mission.html" class="block px-4 py-2 hover:text-blue-300">Our Mission</a>
+                    <a href="contenders.html" class="block px-4 py-2 hover:text-blue-300">Our Contenders</a>
+                </div>
             </div>
-        </nav>
+        </header>
 
-        <!-- Hero Text -->
-        <div class="relative z-10 flex flex-col items-center justify-center text-center h-full text-white px-4">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Welcome to My Website</h1>
-            <p class="text-lg md:text-xl max-w-xl">We build modern, responsive websites with clean design and great
-                functionality.</p>
+        <div class="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
+                The Earth is on the verge of APOCALYPSE
+            </h1>
+            <p class="mt-4 text-lg md:text-xl max-w-xl text-white/90">
+                WE MUST FIND A NEW HOME
+            </p>
         </div>
     </div>
+    <footer class="bg-black/50 backdrop-blur-sm mt-12">
+        <div class="container mx-auto px-6 py-8 text-center space-y-4">
+            <p>© 2025 New Home Mission</p>
+            <div class="space-x-4">
+                <a href="#" class="hover:text-blue-300">Privacy Policy</a>
+                <a href="#" class="hover:text-blue-300">Terms of Use</a>
+            </div>
+            <p class="text-sm text-gray-400">EVACUATE</p>
+        </div>
+    </footer>
 
-    <!-- JavaScript to Toggle Menu and Darken Navbar -->
     <script>
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navbarBg = document.getElementById('navbar-bg');
-        let isOpen = false;
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    </script>
+    <script>
+        const toggleBtn = document.getElementById('sidebarToggle');
+        const sidebar = document.getElementById('sidebar');
 
-        menuBtn.addEventListener('click', () => {
-            isOpen = !isOpen;
-            mobileMenu.classList.toggle('hidden');
-
-            // Toggle dark background
-            if (isOpen) {
-                navbarBg.classList.remove('bg-black/20');
-                navbarBg.classList.add('bg-black/70');
-            } else {
-                navbarBg.classList.remove('bg-black/70');
-                navbarBg.classList.add('bg-black/20');
-            }
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
         });
     </script>
 
