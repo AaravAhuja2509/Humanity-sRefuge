@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top 10 Habitable Exoplanets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+    <header class="absolute top-0 w-full z-20 bg-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+
+                <a href="index.html" class="text-xl font-bold text-white hover:text-blue-300">NEW HOME MISSION</a>
+
+
+                <nav class="hidden md:flex space-x-6 text-white font-medium">
+                    <a href="index.html" class="hover:text-blue-300">Home</a>
+                    <a href="mission.html" class="hover:text-blue-300">Our Mission</a>
+                    <a href="contenders.html" class="hover:text-blue-300">Our Contenders</a>
+                </nav>
+
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu"
+                class="hidden md:hidden mt-2 space-y-2 px-2 pt-2 pb-3 bg-black/80 backdrop-blur-md rounded-lg text-white font-medium">
+                <a href="index.html" class="block px-4 py-2 hover:text-blue-300">Home</a>
+                <a href="mission.html" class="block px-4 py-2 hover:text-blue-300">Our Mission</a>
+                <a href="services.html" class="block px-4 py-2 hover:text-blue-300">Our Contenders</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="text-center py-16 px-6 bg-gradient-to-b from-black via-slate-900 to-black">
+        <h1 class="text-4xl font-bold mb-4 text-blue-200">Top 10 Exoplanet Candidates</h1>
+        <p class="max-w-2xl mx-auto text-lg text-white/80">
+            These planets have been selected as the most promising candidates for our new home. Humanity must choose
+            wisely before it's too late.
+        </p>
+    </section>
+
+    <!-- Planet Cards -->
+    <div class="px-6 py-10 space-y-14 max-w-4xl mx-auto">
+        <!-- 1 -->
+        <div class="space-y-4">
+            <img src="data:image/jpeg;base64,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"
+                alt="Kepler-442 b" class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">1. Kepler‑442 b</h2>
+                <p><strong>Location:</strong> ~1,196 ly, Lyra</p>
+                <p><strong>Why:</strong> Earth-sized, rocky, in habitable zone (ESI ~0.84)</p>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="space-y-4">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.Z_-beaBWIyzRgy_noeVitgHaEK?pid=Api&P=0&h=180"
+                alt="Kepler-452 b" class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">2. Kepler‑452 b</h2>
+                <p><strong>Location:</strong> ~1,400 ly, Cygnus</p>
+                <p><strong>Why:</strong> Earth’s cousin; mild greenhouse potential</p>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="space-y-4">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.18hWLlq1eoOx1k6YS-lK-QHaFM?pid=Api&P=0&h=180" alt="Kepler-22 b"
+                class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">3. Kepler‑22 b</h2>
+                <p><strong>Location:</strong> ~620 ly, Cygnus</p>
+                <p><strong>Why:</strong> First habitable zone planet found by Kepler</p>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="space-y-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0C2ERFi8t6KQcii2s1AAHI-7Vre_d_ScbmA&s"
+                alt="Proxima Centauri b" class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">4. Proxima Centauri b</h2>
+                <p><strong>Location:</strong> 4.2 ly, Centauri system</p>
+                <p><strong>Why:</strong> Closest possible habitable world</p>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="space-y-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Artist%E2%80%99s_impression_of_the_super-Earth_exoplanet_LHS_1140b.jpg"
+                alt="LHS 1140 b" class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">5. LHS 1140 b</h2>
+                <p><strong>Location:</strong> ~40 ly, Cetus</p>
+                <p><strong>Why:</strong> Rocky, dense, cool super‑Earth</p>
+            </div>
+        </div>
+        <!-- 6 -->
+        <div class="space-y-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrJvUJNxWi-ZRbBdQAOKyvvBe0-PPAx3J39A&s" alt="K2-18 b"
+                class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">6. K2‑18 b</h2>
+                <p><strong>Location:</strong> ~124 ly, Leo</p>
+                <p><strong>Why:</strong> First habitable zone planet with detected water vapor</p>
+            </div>
+        </div>
+        <!-- 7 -->
+        <div class="space-y-4">
+            <img src="data:image/jpeg;base64,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" alt="Gliese 581g"
+                class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">7. Gliese 581 g</h2>
+                <p><strong>Location:</strong> ~20.4 ly, Libra</p>
+                <p><strong>Why:</strong> Long-debated, possible Earth-like mass and temperature</p>
+            </div>
+        </div>
+        <!-- 8 -->
+        <div class="space-y-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSerVxzHII67g1QyOVreSwLYNLvZQpVxL2yQ&s" alt="Ross 128 b"
+                class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">8. Ross 128 b</h2>
+                <p><strong>Location:</strong> ~11 ly, Virgo</p>
+                <p><strong>Why:</strong> Quieter red dwarf; good for long-term habitability</p>
+            </div>
+        </div>
+        <!-- 9 -->
+        <div class="space-y-4">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmdQT5wbJ-Ui1JaOGNOkskcry82vPTZ4mZmA&s"
+                alt="TRAPPIST-1 system" class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">9. TRAPPIST‑1 e/f/g</h2>
+                <p><strong>Location:</strong> ~39 ly, Aquarius</p>
+                <p><strong>Why:</strong> Multiple rocky worlds in habitable zone</p>
+            </div>
+        </div>
+        <!-- 10 -->
+        <div class="space-y-4">
+            <img src="data:image/jpeg;base64,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"
+                alt="Teegarden's Star b" class="w-full h-64 object-cover rounded-lg shadow-md" />
+            <div>
+                <h2 class="text-2xl font-semibold text-blue-300">10. Teegarden’s Star b</h2>
+                <p><strong>Location:</strong> ~12.5 ly, Aries</p>
+                <p><strong>Why:</strong> One of the most Earth-like scores on habitability index</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center py-8 text-white/60 text-sm">
+        &copy; 2025 New Home Mission. All rights reserved.
+    </footer>
+</body>
+
+</html>
